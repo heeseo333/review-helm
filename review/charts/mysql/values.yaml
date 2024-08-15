@@ -49,25 +49,25 @@ resources:
     memory: "1Gi"
     cpu: "500m"
 
-livenessProbe:
-  initialDelaySeconds: 10
-  failureThreshold: 3
-  successThreshold: 1
-  tcpSocket:
-    port: 3306
+# livenessProbe:
+#   initialDelaySeconds: 10
+#   failureThreshold: 3
+#   successThreshold: 1
+#   tcpSocket:
+#     port: 3306
 
-readinessProbe:
-  initialDelaySeconds: 10
-  failureThreshold: 3
-  successThreshold: 1
-  tcpSocket:
-    port: 3306
+# readinessProbe:
+#   initialDelaySeconds: 10
+#   failureThreshold: 3
+#   successThreshold: 1
+#   tcpSocket:
+#     port: 3306
 
 env:
   - name: MYSQL_ROOT_PASSWORD
     value: "1234"
   - name: MYSQL_DATABASE
-    value: "wgwg_review"
+    value: "review"
 
 autoscaling:
   enabled: false
